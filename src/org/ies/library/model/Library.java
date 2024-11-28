@@ -13,12 +13,50 @@ public class Library {
     }
 
     public boolean hasBook(String isbn) {
-        for (Book book : books) {
+        for (var book : books) {
             if (book.getIsbn().equals(isbn)) {
                 return true;
             }
         }
         return false;
+    }
+
+    public boolean hasAuthor(String nif) {
+        for (var book : books) {
+            if (book.hasAuthor(nif)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int countBooks(String nif) {
+        int count = 0;
+        for (var book: books){
+            if (book.hasAuthor(nif)){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int countYearBooks(int year) {
+        int years = 0;
+        for (var book : books) {
+            if (book.getYear() == year) {
+                years++;
+            }
+        }
+        return years;
+    }
+
+    public Book findBook(String isbn){
+        for (var book : books){
+            if (book.getIsbn().equals(isbn)){
+                return book;
+            }
+        }
+        return null;
     }
 
     public String getName() {
