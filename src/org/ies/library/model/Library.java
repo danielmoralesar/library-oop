@@ -41,13 +41,13 @@ public class Library {
     }
 
     public int countYearBooks(int year) {
-        int years = 0;
+        int count = 0;
         for (var book : books) {
             if (book.getYear() == year) {
-                years++;
+                count++;
             }
         }
-        return years;
+        return count;
     }
 
     public Book findBook(String isbn){
