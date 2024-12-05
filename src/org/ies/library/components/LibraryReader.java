@@ -22,6 +22,7 @@ public class LibraryReader {
         do{
             System.out.println("¿Cuántos libros tiene la biblioteca?");
             howManyBooks = scanner.nextInt();
+            scanner.nextLine();
         } while (howManyBooks < 1);
 
         Book[] books = new Book[howManyBooks];

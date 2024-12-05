@@ -31,6 +31,7 @@ public class BookReader {
         do {
             System.out.println("¿Cúantos autores tiene el libro?");
             howManyAuthors = scanner.nextInt();
+            scanner.nextLine();
 
             if (howManyAuthors < 1) {
                 System.out.println("Los libros deben tener mínimo un autor");
